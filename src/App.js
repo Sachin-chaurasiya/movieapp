@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import SearchMovies from "./components/SearchMovies/SearchMovies";
+import "./components/SearchMovies/SearchMovies.css";
+import movieimg from "./assets/film-reel.png";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1 className="title">
+        <img src={movieimg} alt="movie-reel" className="movieimg" /> Movie
+        Search App
+      </h1>
+      <SearchMovies />
+      <p style={{ textAlign: "center" }}>
+        &copy;2020 Created By Sachin Chaurasiya
+      </p>
     </div>
   );
 }

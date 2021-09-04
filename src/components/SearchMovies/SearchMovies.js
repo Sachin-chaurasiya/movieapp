@@ -10,7 +10,7 @@ const SearchMovies = () => {
     e.preventDefault();
     console.log("submitting");
 
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=8d0973d400e44023a5ebfe4756d93ae5&language=en-US&query=${query}&page=1&include_adult=false`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
 
     try {
       const res = await fetch(url);

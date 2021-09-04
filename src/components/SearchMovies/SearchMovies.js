@@ -13,7 +13,7 @@ const SearchMovies = () => {
     try {
       const res = await fetch(url);
       const data = await res.json();
-      setMovies(data.results);
+      setMovies(data.results || []);
     } catch (err) {
       console.error(err);
     }
